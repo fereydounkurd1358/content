@@ -1,0 +1,337 @@
+/* @media (min-width: 360px) {
+    
+} */
+
+@media (min-width: 430px) {
+    .scrollable-card--wrapper {
+        gap: 16px;
+        padding-left: 16px;
+    }
+    .course-card__body h3 {
+        font-size: 20px;
+    }
+    .course-card__details {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .hero__content {
+        padding: 153px 0px 297px;
+    }
+
+    .hero__content h1 {
+        font-size: var(--font-size-megal);
+        margin-bottom: 12px;
+    }
+
+
+    .hero__call-to-action {
+        margin-top: 16px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .resource-container.scrollable-card--wrapper {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+        gap: 8px;
+    }
+    .resource__cilde.scrollable-card {
+        flex: unset;
+        scroll-snap-align: unset;
+        height: auto;
+    }
+
+    .card-1 {
+        grid-column: span 6;
+        grid-row: span 3;
+        order: 1;
+    }
+
+    .card-2 {
+        grid-column: span 12;
+        grid-row: span 2;
+        order: 0;
+    }
+
+    .card-3 {
+        grid-column: span 6;
+        grid-row: span 3;
+        order: 1;
+    }
+
+    .card-4 {
+        grid-column: span 6;
+        grid-row: span 3;
+        order: 1;
+    }
+
+    .card-5 {
+        grid-column: span 6;
+        grid-row: span 3;
+        order: 1;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .service-tab__btn {
+        justify-content: space-between;
+        font-size: 16px;
+    }
+
+    .service-tab__btn span {
+        white-space: wrap;
+        text-wrap-style: pretty;
+    }
+
+    .service-tab__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .service-tab__btn-wrapper {
+        width: 30%;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .service-tab__tabs-wrapper {
+        width: 70%;
+    }
+
+    .service-tab__tab {
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+        /* transform: translateX(50%); */
+        opacity: 0;
+        transition: all .1s;
+        z-index: 0;
+    }
+
+
+    .service-tab__tab.slide-off {
+        animation: slide-off .6s forwards;
+        display: flex;
+    }
+
+    @keyframes slide-off {
+        0% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-100%) scale(0.6);
+        }
+    }
+
+    .service-tab__tab.slide-on {
+        animation: slide-on .6s forwards;
+        display: flex;
+    }
+
+    @keyframes slide-on {
+        0% {
+            opacity: 0;
+            transform: translateX(100%) scale(0.6);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .service-tab__tab.slide-onR {
+        animation: slide-onR .6s forwards;
+        display: flex;
+    }
+
+    @keyframes slide-onR {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%) scale(0.6);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .service-tab__tab.slide-offR {
+        animation: slide-offR .6s forwards;
+        display: flex;
+    }
+
+    @keyframes slide-offR {
+        0% {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(100%) scale(.6);
+        }
+    }
+
+    .service-tab__btn svg {
+        transform: translate(24px, 0) scale(.5) rotate(90deg);
+        transition: .28s;
+    }
+
+    .service-tab__btn:hover svg {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(90deg);
+    }
+
+    .service-tab__btn.active svg {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) rotate(90deg);
+    }
+
+
+
+    .about-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .about__img {
+        width: 50%;
+        margin-bottom: 0;
+        order: 1;
+    }
+
+    .about__img img {
+        width: 100%;
+    }
+
+    .about__content {
+        width: 50%;
+        text-align: unset;
+    }
+
+    .about__content p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .about__content .btn {
+        margin: unset;
+    }
+
+    .resource-container.scrollable-card--wrapper {
+        gap: 24px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    :root {
+
+        /* font size */
+        --font-size-sm: 12px;
+        --font-size-md: 14px;
+        --font-size-lg: 16px;
+        --font-size-xl: 20px;
+        --font-size-megal: 40px;
+
+        --font-size-h1: 36px;
+        --font-size-h2: 32px;
+        --font-size-h3: 28px;
+        --font-size-h4: 24px;
+        --font-size-h5: var(--font-size-xl);
+        --font-size-h6: var(--font-size-lg);
+
+
+    }
+    header {
+        height: 112px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+    
+    .service-tab__btn {
+        font-size: 18px;
+    }
+
+    .service-tab__tab-footer {
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    .service-tab__tab-footer .btn-big {
+        font-size: var(--font-size-lg);
+    }
+
+    .service-tab__tab p {
+        margin: 16px 0 0;
+    }
+
+    .service-tab__wrapper {
+        align-items: stretch;
+    }
+
+    .about__content p {
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .scrollable-card--wrapper {
+        gap: 24px;
+        padding-left: 0px;
+    }
+
+    .card-1 {
+        grid-column: span 4;
+        grid-row: span 3;
+        order: 0;
+    }
+
+    .card-2 {
+        grid-column: span 8;
+        grid-row: span 2;
+        order: 1;
+    }
+
+    .card-3 {
+        grid-column: span 3;
+        grid-row: span 4;
+    }
+
+    .card-4 {
+        grid-column: span 5;
+        grid-row: span 4;
+    }
+
+    .card-5 {
+        grid-column: span 4;
+        grid-row: span 3;
+    }
+}
+
+/* @media (min-width: 1200px) {} */
+
+/* @media (min-width: 1440px) {} */
