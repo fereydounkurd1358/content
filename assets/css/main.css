@@ -636,7 +636,7 @@ header {
     scroll-snap-type: x mandatory;
     overflow: auto;
     scrollbar-width: none;
-    padding-left: 32px;
+    padding-left: 12px;
 }
 .course__card-wrapper::-webkit-scrollbar,
 .resource-container::-webkit-scrollbar,
