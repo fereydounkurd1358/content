@@ -636,8 +636,10 @@ header {
     scroll-snap-type: x mandatory;
     overflow: auto;
     scrollbar-width: none;
-    padding-left: 12px;
+    padding: 0 64px;
 }
+
+
 .course__card-wrapper::-webkit-scrollbar,
 .resource-container::-webkit-scrollbar,
 .blog-container::-webkit-scrollbar {
@@ -648,6 +650,9 @@ header {
     scroll-snap-align: start;
     border-radius: var(--radius-16);
     padding: 16px;
+}
+.scrollable-card:last-child {
+    scroll-snap-align: end;
 }
 .blog-card.scrollable-card {
     padding: unset;
